@@ -1,0 +1,14 @@
+/* .taskInput input{
+    width: 100% !important;
+}
+
+.taskInput {
+    background-color: aqua !important;
+} */
+
+.ui.input.action{
+    width: 100% !important;
+}
+.divTodoList {
+    padding-top: 25px;
+}
