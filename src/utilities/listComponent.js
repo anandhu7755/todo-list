@@ -14,13 +14,12 @@ function ListComponent(props) {
 
 
   const onComplete = (data) => {
-    debugger
     let completedItem = todoItems.find((item) => { return item.id == data })
     dispatch(completeItem(completedItem))
   }
 
   const onclose = (data) => {
-    
+
     let closedItem = todoItems.find((item) => { return item.id == data })
     dispatch(removeItem(closedItem))
 
@@ -31,7 +30,7 @@ function ListComponent(props) {
       <List divided relaxed key={element.id}>
         <List.Item >
           <List.Content floated='left'><a onClick={() => { onComplete(element.id) }}><Icon name='check circle' bordered circular></Icon></a></List.Content>
-          <List.Content floated='right'><a onClick={()=>{onclose(element.id)}}><Icon name='close' color='red' bordered circular></Icon></a></List.Content>
+          <List.Content floated='right'><a onClick={() => { onclose(element.id) }}><Icon name='close' color='red' bordered circular></Icon></a></List.Content>
 
           <List.Content>
             <List.Header>{element.value}</List.Header>
