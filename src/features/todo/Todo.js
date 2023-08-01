@@ -7,7 +7,7 @@ import styles from './todo.module.css'
 
 function Todo() {
     const todoItems = useSelector(getToDoItems);
-    //const completedItems = useSelector(getCompletedItems);
+    const completedItems = useSelector(getCompletedItems);
 
     const dispatch = useDispatch()
     const [task, setTast] = useState('');
@@ -49,7 +49,9 @@ function Todo() {
 
                             <Header as='h3' color='green' textAlign='center' >Completed tasks</Header>
                             {/* <Divider section></Divider> */}
-                            <List isCompleted={true}></List>
+                            <div className={styles.divTodoList}>
+                            {completedItems.length != 0 && <List isCompleted={true}></List>}
+                            </div>
                         </Grid.Column>
                     </Grid>
                     <Divider vertical >|</Divider>
