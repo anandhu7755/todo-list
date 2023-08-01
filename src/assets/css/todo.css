@@ -1,3 +1,22 @@
+/* #root, #root .ui.segment{
+    min-height: 100%;
+} */
+
+/* .ui.very.relaxed.two.column.grid{
+    overflow: hidden;
+    height: 100%;
+} */
+
 .divInput .ui.action.input{
     width: 100% !important;
+}
+.todo_divTodoList__cCbWb{
+    overflow: scroll;
+    max-height: 560px !important;
+    min-height: 300px !important;
+}
+
+.divList{
+    padding: 10px;
+    background-color: aliceblue;
 }

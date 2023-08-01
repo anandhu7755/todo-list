@@ -52,7 +52,7 @@ function ListComponent(props) {
       </List>)
   });
   return (
-    <div>
+    <div className='divList'>
       {props.isCompleted ? listOfItemsCompleted : listOfItemsToDo}
     </div>
   )
